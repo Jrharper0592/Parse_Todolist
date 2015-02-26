@@ -123,6 +123,11 @@ body {
                 margin-right:3%;
                 border-radius: 10px;
                 border: 0px;
+                
+                &:hover {
+                cursor: pointer;
+                background-color: aquamarine;
+                }
             } 
           } 
           div.input-holder {

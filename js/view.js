@@ -37,10 +37,18 @@
                 name: $('input[name="name"]').val(),
                 dueBy: $('input[name="dueBy"]').val(),
                 description: $('input[name="description"]').val(),
-                date: new Date()
+                date: new Date(),
+                user: Parse.User.current()
             }
+             var task = new Parse.todoModel(fromForm);
+            var acl = new Parse.ACL(Parse.User.current());
+            var self = this;
+            task.setACL(acl);
+            task.save().then(function(){
+                self.collection.fetch()
+            });
             console.log(fromForm)
-            this.collection.create(fromForm)
+            // this.collection.create(fromForm)
         },
         todoEditMode: function(e) {
             console.log('editmode engaged')

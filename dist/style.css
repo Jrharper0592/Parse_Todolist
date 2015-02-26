@@ -921,6 +921,9 @@ body {
           -webkit-border-radius: 10px;
                   border-radius: 10px;
           border: 0px; }
+          body .app-container form div.button-holder button:hover {
+            cursor: pointer;
+            background-color: aquamarine; }
       body .app-container form div.input-holder {
         width: 88%;
         display: inline-block; }

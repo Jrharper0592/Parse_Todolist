@@ -26,7 +26,8 @@ function app(){
         {url: "./js/TemplateView.js"},
         {url: "./js/router.js"} ,
         {url: "./js/collection.js"} ,
-        {url: "./js/view.js"}
+        {url: "./js/view.js"},
+        {url: "./js/userView.js"}
     ).then(function(){
         document.querySelector("html").style.opacity = 1;
         //connect parse

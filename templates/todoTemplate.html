@@ -45,6 +45,19 @@
                 Date due:
                 <%=model.get('dueBy')%>
             </div>
+            <ul>
+                <% data.each(function(todoModel){ %>    
+                    <li id="<%= todoModel.id %>" class="<%= todoModel.get('urgent') ? 'urgent' : '' %> <%= todoModel.get('isDone') ? 'isDone' : '' %>">  
+                        <input type="checkbox" name="isDone" <% if(todoModel.get('isDone')){ %> checked="checked" <% } %> > 
+                            <span>
+                                <input type="checkbox" name="urgent" id="urgent123<%= todoModel.cid %>" <%= todoModel.get('urgent') ? 'checked="checked"' : '' %> >
+                                <label for="urgent123<%= todoModel.cid %>">Urgent</label>
+                            </span>
+                        </div>
+                    </li>
+                <%})%>    
+            </ul> 
+
         </div>
         <hr>
         <%})%>
