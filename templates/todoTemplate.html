@@ -1,0 +1,51 @@
+<form>
+    <div class="input-holder">
+        <input type="text" placeholder="todo">
+
+    </div>
+    <div class="button-holder">
+        <button class="add">+</button>
+    </div>
+    <div class="editor hidden">
+        <hr>
+        <div class="editor-inputs input-holder">
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="dueBy" placeholder="due by">
+            <input type="text" name="description" placeholder="description">
+        </div>
+        <div class="editor-controls button-holder">
+            <button class="cancel">x</button>
+            <br>
+            <br>
+            <button class="submit">>></button>
+
+        </div>
+    </div>
+    <hr>
+    <% data.each(function(model, index){ %>
+        <div class="todo-container" id='todo-container-<%=index%>'>
+            <button class="delete-button hidden" id="delete-<%=index%>">x</button>
+
+            <div>
+                Event name:
+                <%=model.get('name')%>
+
+            </div>
+            <div>
+                Date created:
+                <%=model.get('date')%>
+
+            </div>
+            <div>
+                Description:
+                <%=model.get('description')%>
+
+            </div>
+            <div>
+                Date due:
+                <%=model.get('dueBy')%>
+            </div>
+        </div>
+        <hr>
+        <%})%>
+</form>
