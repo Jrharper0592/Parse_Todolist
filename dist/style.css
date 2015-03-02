@@ -884,49 +884,50 @@ html, body {
 body {
   -webkit-transition: opacity .25s ease;
           transition: opacity .25s ease; }
-  body .app-container {
-    border: 1px solid blue;
-    max-width: 100%;
-    background-color: #efefef;
-    padding: 1em; }
-    body .app-container form {
-      width: 100%; }
-      body .app-container form input {
+
+.app-container {
+  border: 1px solid blue;
+  max-width: 100%;
+  background-color: #efefef;
+  padding: 1em; }
+  .app-container form {
+    width: 100%; }
+    .app-container form input {
+      width: 100%;
+      height: 100%;
+      display: inline-block; }
+    .app-container form div {
+      width: 100%;
+      height: 25%; }
+    .app-container form .editor {
+      -webkit-transition: all 2s ease;
+              transition: all 2s ease;
+      opacity: 1;
+      display: inline-block;
+      z-index: 1; }
+    .app-container form .hidden {
+      position: absolute;
+      opacity: 0;
+      z-index: -1; }
+    .app-container form div.button-holder {
+      width: 10%;
+      display: inline-block;
+      padding: 0px; }
+      .app-container form div.button-holder button {
         width: 100%;
-        height: 100%;
-        display: inline-block; }
-      body .app-container form div {
-        width: 100%;
-        height: 25%; }
-      body .app-container form .editor {
-        -webkit-transition: all 2s ease;
-                transition: all 2s ease;
-        opacity: 1;
-        display: inline-block;
-        z-index: 1; }
-      body .app-container form .hidden {
-        position: absolute;
-        opacity: 0;
-        z-index: -1; }
-      body .app-container form div.button-holder {
-        width: 10%;
-        display: inline-block;
-        padding: 0px; }
-        body .app-container form div.button-holder button {
-          width: 100%;
-          height: 30px;
-          margin: 0px;
-          padding: 0px;
-          margin-right: 3%;
-          -webkit-border-radius: 10px;
-                  border-radius: 10px;
-          border: 0px; }
-          body .app-container form div.button-holder button:hover {
-            cursor: pointer;
-            background-color: aquamarine; }
-      body .app-container form div.input-holder {
-        width: 88%;
-        display: inline-block; }
-      body .app-container form .delete-button {
-        float: right; }
+        height: 30px;
+        margin: 0px;
+        padding: 0px;
+        margin-right: 3%;
+        -webkit-border-radius: 10px;
+                border-radius: 10px;
+        border: 0px; }
+        .app-container form div.button-holder button:hover {
+          cursor: pointer;
+          background-color: aquamarine; }
+    .app-container form div.input-holder {
+      width: 88%;
+      display: inline-block; }
+    .app-container form .delete-button {
+      float: right; }
 

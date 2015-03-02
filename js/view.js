@@ -6,6 +6,8 @@
             'click .add': 'todoAdd',
             'click .cancel': 'todoCancel',
             'click .submit': 'todoSubmit',
+            "change input[name='urgent']": "toggleUrgent",
+            "change input[name='isDone']": "toggleIsDone",
             'click .todo-container': 'todoEditMode',
             'click .delete-button': 'todoDelete'
         },
@@ -66,6 +68,33 @@
 
             this.collection.remove(this.collection.at(index))
 
+        },
+        toggleUrgent: function(e){
+            var m = this.getModelAssociatedWithEvent(e);
+            if(m){
+                m.set('urgent', !m.get('urgent'));
+                this.collection.sort();
+                this.render();
+            }
+        },
+        toggleIsDone: function(e){
+            var m = this.getModelAssociatedWithEvent(e);
+            if(m){
+                m.set('isDone', !m.get('isDone'));
+                if(m.get('isDone')){ // if setting to 'done', set 'urgent' to false
+                    m.set('urgent', false);
+                }
+                this.collection.sort();
+                this.render();
+            }
+        },
+        getModelAssociatedWithEvent: function(e){
+            var el = e.target,
+                li = $(el).closest('li')[0],
+                id = li.getAttribute('id'),
+                m = this.collection.get(id);
+
+            return m;
         }
     });
 

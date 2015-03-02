@@ -79,7 +79,7 @@ height: 100%;
 
 body {
     transition: opacity .25s ease;
-
+}
 
       .app-container {
         border: 1px solid blue;
@@ -138,6 +138,39 @@ body {
           .delete-button {
             float: right;
           }
+        
+        // ul {
+        // padding-left: 0;
+        // margin-bottom: 0;
+        // list-style: none;
+
+        // li {
+        //     border-bottom: 2px solid #444;
+        //     position: relative;
+        //     padding-left: 1em;
+        //     padding-bottom: 1em;
+        //     padding-right: 1em;
+        //     transition: all .25s ease;
+
+        //     }
+
+        //     // &.urgent {
+        //     //     background-color: #FC0;
+        //     // }
+
+        //     // &.isDone {
+        //     //     background-color: rgba(10,200,60,.5);
+        //     //     color: #eee;
+        //     }
+
+        //     > span {
+        //         display: inline-block;
+        //         padding: 1rem 3rem 1rem 0;
+        //         width: 100%;
+        //     }
+
+            
+            }
         }
-      }
-}
+            
+      
